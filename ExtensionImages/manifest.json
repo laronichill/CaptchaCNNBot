@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Captcha Image Saver",
+  "version": "1.0",
+  "permissions": [
+      "activeTab",
+      "downloads",
+      "notifications"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://www.captchacoin.net/earn/mining/mine.html"],
+          "js": ["content.js"]
+      }
+  ]
+}

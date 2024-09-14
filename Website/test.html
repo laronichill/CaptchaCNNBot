@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CaptchaCoin</title>
+    <script language="JavaScript" type="text/javascript" src="js5.js" defer></script>
+    <script language="JavaScript" type="text/javascript" src="mine.js" defer></script>
+    <meta name="description" content="CaptchaCoin: Mine Caps">
+</head>
+<body>
+    <!-- Your HTML content here -->
+    <div id="div"></div>
+    <!-- Place the script block here or include it in a separate JS file -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var captchaImages = document.querySelectorAll('#div .captcha-image');
+
+        captchaImages.forEach(function(img) {
+            img.addEventListener('click', function() {
+                var index = img.getAttribute('data-index');
+                sel(index); // Call your existing function to handle image click
+            });
+        });
+    });
+    </script>
+</body>
+</html>
